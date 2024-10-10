@@ -18,7 +18,7 @@ jobs:
     - name: Setup Node.js
       uses: actions/setup-node@v2
       with:
-        node-version: '14'
+        node-version: '20'
 
     - name: Install dependencies and run build and preview for each package
       run: |
@@ -27,6 +27,8 @@ jobs:
             cd "$dir"
             npm install
             npm run build
+            git config --global user.email "juanjo.fernandez@liferay.com"
+            git config --global user.name "It's me"
             git add ./dist
             git commit -m "Add generated code"
             cd -
