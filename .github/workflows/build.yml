@@ -27,7 +27,8 @@ jobs:
             cd "$dir"
             npm install
             npm run build
-            npm run preview
+            git add ./dist
+            git commit -m "Add generated code"
             cd -
           fi
         done
