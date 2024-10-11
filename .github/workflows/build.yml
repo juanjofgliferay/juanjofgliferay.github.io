@@ -25,7 +25,7 @@ jobs:
         for dir in lr/cx/filters/*/; do
           if [ -f "$dir/package.json" ]; then
             cd "$dir"
-            npm install
+            npm ci
             npm run build
             git config --global user.email "juanjo.fernandez@liferay.com"
             git config --global user.name "It's me"
